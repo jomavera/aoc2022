@@ -1,6 +1,6 @@
 (require '[clojure.java.io :as io])
 
-;; day-01-part-01
+;; part-01
 (with-open [rdr (io/reader "input_01.txt")]
   (let [lines (line-seq rdr) num-rows (- (count lines) 1)]
     (loop [line (first lines) idx 0 suma-temp 0 lista-calorias []]
@@ -11,7 +11,7 @@
         (println (reduce max (conj lista-calorias (+ suma-temp (Integer/parseInt line)))))))))
 
 
-;; day-01-part-02
+;; part-02
 (with-open [rdr (io/reader "input_01.txt")]
   (let [lines (line-seq rdr) num-rows (- (count lines) 1)]
     (loop [line (first lines) idx 0 suma-temp 0 lista-calorias []]

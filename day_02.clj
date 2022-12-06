@@ -1,7 +1,7 @@
 (require '[clojure.java.io :as io])
 
-;; day-02-part-01
-(with-open [rdr (io/reader "resources/input_02.txt")]
+;; part-01
+(with-open [rdr (io/reader "input_02.txt")]
   (let [lines (line-seq rdr) num-rows (- (count lines) 1)]
     (loop [line (first lines) idx 0 score 0 ]
       (if (< idx num-rows)
@@ -35,8 +35,8 @@
                          "B" (+ score 9)
                          "C" (+ score 6)))))))))
 
-;; day-02-part-02
-(with-open [rdr (io/reader "resources/input_02.txt")]
+;; part-02
+(with-open [rdr (io/reader "input_02.txt")]
   (let [lines (line-seq rdr) num-rows (- (count lines) 1)]
     (loop [line (first lines) idx 0 score 0]
       (if (< idx num-rows)
