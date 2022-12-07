@@ -14,7 +14,6 @@ for row in eachline(io)
     rucksack = string(matches[1].match[:])
     largo = length(rucksack)
     mitad = Int64(largo/2)
-    finish = 0
     letra = intersect(collect(string(SubString(rucksack, 1, mitad))), collect(string(SubString(rucksack, mitad+1, largo))))[1]
     push!(prioridades,letras_dict[string(letra)])
 end
