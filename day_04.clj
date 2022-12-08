@@ -1,3 +1,5 @@
+(require '[clojure.java.io :as io])
+
 ;; part-01
 (with-open [rdr (io/reader "input_04.txt")]
   (let [lines (line-seq rdr) num-rows (- (count lines) 1)]
